@@ -23,8 +23,7 @@ const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await axios.get('INSERT_BACKEND_ENDPOINT/api/news');
-        setNewsItems(response.data);
+        const response = await axios.get('http://localhost:5030/api/news');        setNewsItems(response.data);
       } catch (err) {
         setError('Failed to load news');
       } finally {
