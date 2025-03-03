@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -9,6 +11,7 @@ const submissionRoutes = require('./routes/submissionRoutes');
 const messageRoutes = require('./routes/messageRoutes');
 const inquiryRoutes = require('./routes/inquiryRoutes');
 const adminRoutes = require('./routes/adminRoutes');  
+const UserRoutes=require('./routes/UserRoutes');
 
 const app = express();
 
@@ -41,7 +44,7 @@ app.use('/api/submissions', submissionRoutes);
 app.use('/api/messages', messageRoutes);
 app.use('/api/inquiries', inquiryRoutes);
 app.use('/api/admin', adminRoutes); 
-
+app.use('/api/users', UserRoutes);
 // Start Server
 const PORT = process.env.PORT || 5030;
 app.listen(PORT, () => {
