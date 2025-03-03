@@ -225,6 +225,7 @@ const Home = () => {
                 Publish Now
               </motion.button>
             </Link>
+            
           </motion.div>
         </div>
       </section>
